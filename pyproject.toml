@@ -5,6 +5,7 @@ description = "学习 LangChain 和 LangGraph 的实验项目"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "fastapi>=0.143.0",
+    "httpx>=0.28.1",
     "uvicorn[standard]>=0.54.0",
 ]
 
