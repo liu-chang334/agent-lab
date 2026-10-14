@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug-FastAPI",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "module": "uvicorn",
+      "args": [
+        "app:app",
+        "--app-dir",
+        "${workspaceFolder}/lessons/02-http-and-json",
+        "--port",
+        "8000"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Debug-HTTPX",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "program": "${workspaceFolder}/lessons/02-http-and-json/client.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

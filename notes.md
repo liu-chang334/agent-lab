@@ -1,5 +1,14 @@
 <!-- omit from toc -->
 # Agent Lab 学习笔记
+- [1. Python 基础](#1-python-基础)
+- [2. uv 环境管理](#2-uv-环境管理)
+- [3. JSON](#3-json)
+- [4. HTTP 通信](#4-http-通信)
+- [5. FastAPI 与 Uvicorn](#5-fastapi-与-uvicorn)
+- [6. 接口与状态码](#6-接口与状态码)
+- [7. HTTPX 客户端](#7-httpx-客户端)
+- [8. 格式化](#8-格式化)
+
 
 ## 1. Python 基础
 
