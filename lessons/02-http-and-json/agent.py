@@ -6,7 +6,7 @@ from openai import OpenAI
 from tools import convert_length, m_to_mm
 
 # api key
-os.environ["DEEPSEEK_API_KEY"] = "sk-6cb1521d239446acb0f385eaa282cad4"
+os.environ["DEEPSEEK_API_KEY"] = ""
 
 # 从环境变量读取密钥，创建客户端。
 client = OpenAI(
