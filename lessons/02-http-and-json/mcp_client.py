@@ -8,7 +8,7 @@ from mcp import Client, StdioServerParameters
 from openai import OpenAI
 
 # api key
-os.environ["DEEPSEEK_API_KEY"] = "sk-6cb1521d239446acb0f385eaa282cad4"
+os.environ["DEEPSEEK_API_KEY"] = ""
 
 
 async def main():
