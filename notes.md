@@ -3,7 +3,10 @@
 - [1. uv 环境管理](#1-uv-环境管理)
 - [2. JSON](#2-json)
 - [3. HTTP 通信](#3-http-通信)
+  - [3.1. IP 地址](#31-ip-地址)
+  - [3.2. 端口](#32-端口)
 - [4. FastAPI 与 Uvicorn](#4-fastapi-与-uvicorn)
+  - [FastAPI](#fastapi)
 - [5. 接口与状态码](#5-接口与状态码)
 - [6. HTTPX 客户端](#6-httpx-客户端)
 - [7. 格式化](#7-格式化)
@@ -115,7 +118,7 @@ print(data["value"])
 
 HTTP(HyperText Transfer Protocol), 超文本传输协议, 是客户端与服务端之间传递请求和响应的一套通信规则
 
-1. IP 地址
+### 3.1. IP 地址
    
 IP(Internet Protocol), 网际协议. IP 地址用于定位网络中的设备接口
 
@@ -123,7 +126,7 @@ IP(Internet Protocol), 网际协议. IP 地址用于定位网络中的设备接�
 - 192.168.1.10: 局域网地址, 其他设备可以通过它与这台电脑通信, 前提是服务和网络允许访问
 - 1台电脑可以有多个 IP 地址, 地址也可能随网络变化
 
-2. 端口
+### 3.2. 端口
 
 端口用于区分同一台电脑上的不同网络服务. IP 地址确定通信目标, 端口确定由哪个服务接收数据
 
@@ -144,16 +147,25 @@ http://127.0.0.1:8000/convert?value=2500
 
 ## 4. FastAPI 与 Uvicorn
 
-- FastAPI: 定义接口、校验参数、执行函数
-- Uvicorn: 运行服务、接收请求、发送响应
+### FastAPI
+
+FastAPI是一个用于编写Web API的Python框架, 可以将python函数转换为HTTP接口, 让浏览器和其他程序可以通过HTTP请求调用
+
+1. 使用uv安装
 
 ```powershell
-uv run uvicorn app:app --app-dir .\lessons\02-http-and-json --reload
+uv add fastapi "uvicorn[standard]"
 ```
 
-- `app:app`：加载 `app.py` 中的 `app` 对象。
-- `--reload`：修改代码后自动重新加载。
-- `Ctrl+C`：停止服务。
+2. 导入与创建应用
+   
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+```
+
+- `app`: FastAPI 应用实例, 用于登记接口
 
 ## 5. 接口与状态码
 
